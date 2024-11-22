@@ -1,0 +1,50 @@
+.product-list {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap to the next row if needed */
+  gap: 1rem; /* Space between cards */
+  justify-content: center; /* Center cards horizontally */
+  margin: 2rem 1rem; /* Add some spacing around the product list */
+}
+
+.product-card {
+  border: 3px solid #ddd;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 290px; /* Slightly increased card width */
+  height: 340px; /* Adjusted height for better proportions */
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: #fff; /* Optional: Add a subtle background for cards */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a shadow for visual depth */
+}
+
+.product-card img {
+  width: 100%; /* Full width for the image */
+  height: 160px; /* Increased height for better visibility */
+  object-fit: cover; /* Ensures images fit the card nicely */
+  border-radius: 4px;
+}
+
+.product-card h3 {
+  font-size: 18px; /* Increased font size for product name */
+  margin: 0 !important; /* Force no margin */
+  height: auto; /* Allow height to adjust based on content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.product-card p {
+  color: #ff9900;
+  font-weight: bold;
+  margin: 0 !important; /* Force no margin */
+  font-size: 16px; /* Slightly increase the price text size */
+}
+

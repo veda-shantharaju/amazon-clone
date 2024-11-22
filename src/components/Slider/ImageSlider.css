@@ -1,0 +1,54 @@
+.image-slider {
+  width: 100%; /* Ensures the slider takes full width */
+  max-width: 1000px; /* Optional: Limits the maximum width */
+  margin: 0 auto; /* Centers the slider */
+}
+
+.slider-image {
+  width: 100%;  /* Ensures the image fills the container */
+  height: 500px;  /* Set a consistent height */
+  object-fit: cover;  /* Ensures the image scales to cover the area without distortion */
+  border-radius: 0; /* Removes any rounded corners */
+  padding: 0; /* Removes padding to eliminate any gaps */
+  margin: 0; /* Removes margin to eliminate any gaps */
+}
+
+.slick-prev, .slick-next {
+  z-index: 10;               /* Ensures arrows appear above the slider */
+  display: block !important; /* Makes sure arrows are always displayed */
+  width: 30px;               /* Width of the arrow button */
+  height: 30px;              /* Height of the arrow button */
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for arrows */
+  border-radius: 50%;        /* Optional: Makes the arrows circular */
+}
+
+.slick-prev::before, .slick-next::before {
+  font-size: 30px;           /* Adjust arrow size */
+  color: white;              /* Arrow color */
+}
+
+.slick-prev {
+  left: -40px;               /* Position the left arrow */
+}
+
+.slick-next {
+  right: -40px;              /* Position the right arrow */
+}
+
+.slick-dots li button:before {
+  font-size: 14px;          /* Adjust the size of the dots */
+  color: rgba(59, 57, 57, 0.7); /* Transparent white color */
+  background: rgba(209, 141, 141, 0.5); /* Add a subtle background */
+  border-radius: 50%;       /* Make sure the dot background is circular */
+  padding: 4px;             /* Add padding to make the background visible */
+}
+
+.slick-dots li.slick-active button:before {
+  color: rgb(14, 13, 13); /* Brighter white for the active dot */
+  background: rgba(173, 112, 112, 0.5); /* Slightly more opaque background */
+  font-size: 16px;             /* Larger size for the active dot */
+}
+
+.slick-dots {
+  bottom: 15px; /* Adjusts the position of the dots (optional) */
+}

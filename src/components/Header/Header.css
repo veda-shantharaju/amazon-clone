@@ -1,0 +1,88 @@
+/* Container for the header */
+.header {
+  background-color: #ff9800;  /* Background color for the header */
+  padding: 10px 20px;
+  display: flex;               /* Flex container for the navbar */
+  justify-content: space-between; /* Space between elements in the navbar */
+  align-items: center;         /* Vertically center all items */
+}
+
+/* Styling for the left side (AutoLocation and SearchBar) */
+.header-content {
+  display: flex;               /* Display elements horizontally */
+  justify-content: flex-start; /* Align left */
+  align-items: center;         /* Center vertically */
+  flex-grow: 1;                /* Allow this section to take up available space */
+}
+
+/* Styling for the right section (Login/Signup and Cart) */
+.header-right {
+  display: flex;
+  align-items: center;         /* Vertically center items */
+}
+
+/* Styling for the location text */
+.location {
+  color: #fff;
+  font-size: 16px;
+  margin-right: 5rem;  /* Space between location and search bar */
+  margin-left: 5rem;
+}
+
+/* Styling for the SearchBar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 1200px;
+}
+
+/* Styling for the input field inside the search bar */
+.search-bar input {
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 1200px;
+}
+
+/* Styling for the search button */
+.search-bar button {
+  padding: 0.5rem 1rem;
+  background-color: #f7d59b;
+  color: rgb(36, 35, 35);
+  border: none #292828;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Hover effect for the search button */
+.search-bar button:hover {
+  background-color: #e68900;
+}
+
+/* Styling for the Login/Signup and Cart links */
+.auth-links .auth-link,
+.cart .cart-link {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  font-size: 16px;
+}
+
+.cart .cart-link{
+  margin-right: 5rem;
+}
+
+/* Cart and user icon styling */
+.auth-link svg,
+.cart-link svg {
+  margin-right: 5px;
+}
+
+/* Hover effects for the auth and cart links */
+.auth-link:hover,
+.cart-link:hover {
+  color: #ffcc00;
+}

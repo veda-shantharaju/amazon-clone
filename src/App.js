@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { CartProvider } from "./context/CartContext";
+import 'leaflet/dist/leaflet.css';
 
-function App() {
+
+// Pages
+import HomePage from "./pages/HomePage";
+import CartPage from "./pages/CartPage";
+import LoginPage from "./pages/LoginPage";
+
+// Global Styles
+import "./styles/global.css";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CartProvider>
+      <Router>
+        <div className="App">
+          <Routes>
+            {/* Home Page */}
+            <Route path="/" element={<HomePage />} />
+            
+            {/* Cart Page */}
+            <Route path="/cart" element={<CartPage />} />
+            
+            {/* Login Page */}
+            <Route path="/login" element={<LoginPage />} />
+          </Routes>
+        </div>
+      </Router>
+    </CartProvider>
   );
-}
+};
 
 export default App;
