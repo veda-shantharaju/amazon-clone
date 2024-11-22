@@ -13,12 +13,12 @@ import vegImage from "../assets/veg.jpeg";
 
 const HomePage = () => {
   const products = [
-    { id: 1, name: "Clothing", price: "₹2,500", image: clothImage },
-    { id: 2, name: "Daily Needs", price: "₹1,200", image: dailyImage },
-    { id: 3, name: "Dairy Products", price: "₹450", image: dairyImage },
-    { id: 4, name: "Electronics", price: "₹12,000", image: elecImage },
-    { id: 5, name: "Fruits", price: "₹600", image: fruitsImage },
-    { id: 6, name: "Vegetables", price: "₹300", image: vegImage },
+    { id: 1, name: "Clothing", price: "₹30", image: clothImage, discount: "Up to 50%" },
+    { id: 2, name: "Daily Needs", price: "₹15", image: dailyImage, discount: "Up to 20%" },
+    { id: 3, name: "Dairy Products", price: "₹10", image: dairyImage, discount: "Up to 30%" },
+    { id: 4, name: "Electronics", price: "₹50", image: elecImage, discount: "Up to 70%" },
+    { id: 5, name: "Fruits", price: "₹20", image: fruitsImage, discount: "Up to 15%" },
+    { id: 6, name: "Vegetables", price: "₹10", image: vegImage, discount: "Up to 25%" },
   ];
 
   const sliderImages = [
@@ -47,7 +47,11 @@ const HomePage = () => {
       {/* Product Cards */}
       <div className="product-list">
         {products.map((product) => (
-          <ProductCard key={product.id} product={product} />
+          <ProductCard
+            key={product.id}
+            product={product}
+            discount={product.discount} // Pass the dynamic discount
+          />
         ))}
       </div>
     </div>

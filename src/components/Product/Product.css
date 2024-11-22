@@ -7,6 +7,7 @@
 }
 
 .product-card {
+  position: relative; /* Enables positioning of badge inside the card */
   border: 3px solid #ddd;
   padding: 1rem;
   text-align: center;
@@ -15,12 +16,25 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 290px; /* Slightly increased card width */
-  height: 340px; /* Adjusted height for better proportions */
+  width: 290px;
+  height: 340px;
   box-sizing: border-box;
   overflow: hidden;
-  background-color: #fff; /* Optional: Add a subtle background for cards */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a shadow for visual depth */
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-badge {
+  position: absolute; /* Position it relative to the product card */
+  top: 10px; /* Distance from the top of the card */
+  left: 10px; /* Distance from the left of the card */
+  background-color: #ff9900; /* Brand color for background */
+  color: white; /* Text color */
+  font-size: 14px; /* Adjust text size */
+  font-weight: bold;
+  padding: 5px 10px; /* Padding around the text */
+  border-radius: 4px; /* Optional: Rounded corners */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Optional: Shadow for depth */
 }
 
 .product-card img {
@@ -31,9 +45,9 @@
 }
 
 .product-card h3 {
-  font-size: 18px; /* Increased font size for product name */
-  margin: 0 !important; /* Force no margin */
-  height: auto; /* Allow height to adjust based on content */
+  font-size: 16px;
+  margin: 0.5rem 0;
+  height: 2rem; /* Uniform title height */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,7 +58,7 @@
 .product-card p {
   color: #ff9900;
   font-weight: bold;
-  margin: 0 !important; /* Force no margin */
-  font-size: 16px; /* Slightly increase the price text size */
+  margin: 0;
+  font-size: 14px; /* Slightly increase the price text size */
 }
 
