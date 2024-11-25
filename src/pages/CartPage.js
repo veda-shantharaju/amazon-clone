@@ -1,10 +1,11 @@
 import React from 'react';
+import CartPageComponent from '../components/CartPage/CartPageComponent'; // Import the actual CartPage component
 
 const CartPage = () => {
   return (
     <div>
-      <h2>Your Cart</h2>
-      {/* Add your cart logic and product list here */}
+      <CartPageComponent />
+      {/* Add your cart logic and product list here if needed */}
     </div>
   );
 };
