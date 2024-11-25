@@ -10,3 +10,11 @@ body {
   gap: 1rem;
   padding: 1rem;
 }
+
+/* Dark theme styles */
+body.dark-theme {
+  background-color: #333;
+  color: #fff;
+}
+
+/* You can add more styles here for other elements based on the theme */

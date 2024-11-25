@@ -2,10 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom'; // Import Link for routing
 import AutoLocation from './AutoLocation';
 import SearchBar from './SearchBar';
-import { FaShoppingCart, FaUserAlt } from 'react-icons/fa'; // Cart and User icons
+import { FaShoppingCart, FaUserAlt, FaSun, FaMoon } from 'react-icons/fa'; // Cart, User, Sun, and Moon icons
+import { useTheme } from '../../context/ThemeContext';
 import './Header.css';
 
 const Header = ({ onSearch }) => {
+  const { isDarkMode, toggleTheme } = useTheme(); // Get the theme state and toggle function
   return (
     <header className="header">
       <div className="header-content">
@@ -28,6 +30,13 @@ const Header = ({ onSearch }) => {
           <Link to="/cart" className="cart-link">
             <FaShoppingCart /> Cart
           </Link>
+        </div>
+
+        {/* Theme Toggle Section */}
+        <div className="theme-toggle">
+          <button onClick={toggleTheme} className="theme-button">
+            {isDarkMode ? <FaSun /> : <FaMoon />} {/* Display sun/moon icon based on theme */}
+          </button>
         </div>
       </div>
     </header>
