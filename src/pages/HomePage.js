@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../components/Header/Header";
 import ImageSlider from "../components/Slider/ImageSlider";
 import ProductCard from "../components/Product/ProductCard";
+ import Footer from "../components/Footer/Footer";
 
 // Importing local images for slider
 import clothImage from "../assets/cloth.jpeg";
@@ -54,6 +55,8 @@ const HomePage = () => {
           />
         ))}
       </div>
+      {/* Header Component */}
+      < Footer/>
     </div>
   );
 };
