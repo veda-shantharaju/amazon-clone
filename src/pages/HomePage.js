@@ -1,35 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Header from "../components/Header/Header";
 import ImageSlider from "../components/Slider/ImageSlider";
 import ProductCard from "../components/Product/ProductCard";
- import Footer from "../components/Footer/Footer";
-
-// Importing local images for slider
-import clothImage from "../assets/cloth.jpeg";
-import dailyImage from "../assets/daily.jpeg";
-import dairyImage from "../assets/dairy.jpeg";
-import elecImage from "../assets/elec.jpeg";
-import fruitsImage from "../assets/fruits.jpeg";
-import vegImage from "../assets/veg.jpeg";
+import Footer from "../components/Footer/Footer";
+import { products } from "../data/productdata";  // Import product data
 
 const HomePage = () => {
-  const products = [
-    { id: 1, name: "Clothing", price: "₹30", image: clothImage, discount: "Up to 50%" },
-    { id: 2, name: "Daily Needs", price: "₹15", image: dailyImage, discount: "Up to 20%" },
-    { id: 3, name: "Dairy Products", price: "₹10", image: dairyImage, discount: "Up to 30%" },
-    { id: 4, name: "Electronics", price: "₹50", image: elecImage, discount: "Up to 70%" },
-    { id: 5, name: "Fruits", price: "₹20", image: fruitsImage, discount: "Up to 15%" },
-    { id: 6, name: "Vegetables", price: "₹10", image: vegImage, discount: "Up to 25%" },
-  ];
-
-  const sliderImages = [
-    clothImage,
-    dailyImage,
-    dairyImage,
-    elecImage,
-    fruitsImage,
-    vegImage,
-  ];
+  const sliderImages = products.map(product => product.image);  // Dynamically generate slider images from products
 
   return (
     <div>
@@ -48,15 +26,17 @@ const HomePage = () => {
       {/* Product Cards */}
       <div className="product-list">
         {products.map((product) => (
-          <ProductCard
-            key={product.id}
-            product={product}
-            discount={product.discount} // Pass the dynamic discount
-          />
+          <Link key={product.id} to={`/products/${product.category}`}>
+            <ProductCard
+              product={product}
+              discount={product.discount} // Pass the dynamic discount
+            />
+          </Link>
         ))}
       </div>
-      {/* Header Component */}
-      < Footer/>
+
+      {/* Footer Component */}
+      <Footer />
     </div>
   );
 };

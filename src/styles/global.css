@@ -17,4 +17,19 @@ body.dark-theme {
   color: #fff;
 }
 
-/* You can add more styles here for other elements based on the theme */
+h1, h2 {
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+}
+
+.category-card {
+  padding: 20px;
+  margin: 10px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+}

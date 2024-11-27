@@ -1,0 +1,38 @@
+.product-list-page {
+    padding: 20px;
+  }
+  
+  .filters {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .filters input {
+    padding: 8px;
+    width: 200px;
+  }
+  
+  .filters select {
+    padding: 8px;
+  }
+  
+  .subcategories {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .subcategories button {
+    padding: 8px 15px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .subcategories button.active {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
